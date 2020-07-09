@@ -1,0 +1,15 @@
+h1 {
+  color: #AF80ED;
+}
+
+.buttonClass {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px dotted #fff;
+  background: #2e689e;
+}
+
+/*# sourceMappingURL=button.css.map */
