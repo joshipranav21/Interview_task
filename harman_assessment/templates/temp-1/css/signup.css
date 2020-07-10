@@ -15,10 +15,6 @@ body {
 a {
   text-decoration: none;
   color: #1ab188;
-  transition: 0.5s ease;
-}
-a:hover {
-  color: "";
 }
 
 h1 {
@@ -68,6 +64,20 @@ h1 {
   color: #ffffff;
 }
 
+.section-one:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.section-one > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.section-one > div:last-child {
+  margin: 0;
+}
+
 label {
   position: absolute;
   transform: translateY(6px);
@@ -76,25 +86,12 @@ label {
   pointer-events: none;
   font-size: 22px;
 }
-label .req {
-  margin: 2px;
-  color: #1ab188;
-}
 
 label.active {
-  transform: translateY(50px);
-  left: 2px;
-  font-size: 14px;
-}
-label.active .req {
-  opacity: 0;
+  color: transparent;
 }
 
-label.highlight {
-  color: #ffffff;
-}
-
-input, textarea {
+input {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -104,17 +101,10 @@ input, textarea {
   background-image: none;
   border: 1px solid #a0b3b0;
   color: #ffffff;
-  border-radius: 0;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-input:focus, textarea:focus {
+input:focus {
   outline: 0;
   border-color: #1ab188;
-}
-
-textarea {
-  border: 2px solid #a0b3b0;
-  resize: vertical;
 }
 
 .btn {

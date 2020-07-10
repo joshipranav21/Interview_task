@@ -1,14 +1,9 @@
 $body-bg: #c1bdba;
 $form-bg: #162733;
 $white: #ffffff;
-
 $main: #1ab188;
-
 $gray-light: #a0b3b0;
-$gray: #ddd;
-
 $thin: 300;
-$normal: 400;
 $bold: 600;
 $br: 4px;
 
@@ -78,6 +73,23 @@ a {
     }
   }
 
+.section-one {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    > div {
+      float:left;
+      width:48%;
+      margin-right:4%;
+      &:last-child { 
+        margin:0;
+      }
+    }
+  }
+
   label {
     position:absolute;
     transform:translateY(6px);
@@ -85,26 +97,13 @@ a {
     color:rgba($white,.5);
     pointer-events: none;
     font-size:22px;
-    .req {
-        margin:2px;
-        color:$main;
-    }
   }
   
   label.active {
-    transform:translateY(50px);
-    left:2px;
-    font-size:14px;
-    .req {
-      opacity:0;
-    }
+    color:transparent;
   }
   
-  label.highlight {
-      color:$white;
-  }
-  
-  input, textarea {
+  input {
     font-size:22px;
     display:block;
     width:100%;
@@ -114,17 +113,10 @@ a {
     background-image:none;
     border:1px solid $gray-light;
     color:$white;
-    border-radius:0;
-    transition:border-color .25s ease, box-shadow .25s ease;
     &:focus {
           outline:0;
           border-color:$main;
     }
-  }
-
-  textarea {
-    border:2px solid $gray-light;
-    resize: vertical;
   }
 
   .btn {
@@ -146,4 +138,3 @@ a {
     display:block;
     width:100%;
   }
-

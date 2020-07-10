@@ -19,28 +19,38 @@
                     <form action="/" method="post" id="signup-data" name="signup-data">
                         <div class="section-one">
                             <div class="form-control">
-                                <label>First name<span>*</span></span></label>
+                                <label>First name<span>*</span></label>
                                 <input type="text" name="fname" id="fname" required/>
                             </div>
                             <div class="form-control">
-                                <label>Last name<span>*</span></span></label>
+                                <label>Last name<span>*</span></label>
                                 <input type="text" name="lname" id="lname" required/>
                             </div>
                          </div>
                         <div class="form-control">
-                            <label>Email address<span>*</span></span></label>
+                            <label>Email address<span>*</span></label>
                             <input type="email" name="emailId" id="emailId" required/>
                         </div>
                         <div class="form-control">
-                            <label>Set A Password<span>*</span></span></label>
+                            <label>Set A Password<span>*</span></label>
                             <input type="password" name="password" id="password" required/>
                         </div>
                         <button type="submit" class="btn btn-info">Get Started</button>
                    </form>
               </div>
-            </div>
-            
+            </div>            
         </div>
-    </body>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $("input").on('keyup blur focus',function(){
+            var label = $(this).prev('label');
+            if($(this).val() === ''){
+                label.addClass('active');
+            }else{
+                label.removeClass('active');
+            }        
+        });
+    </script>
+</body>
 </html>
